@@ -1,95 +1,77 @@
-🏛️ Indian Judicial Database Management System (IJDMS)
-📘 Overview
+# 🏛️  Judicial Database Management System (JDMS)
 
-The Indian Judicial Database Management System (IJDMS) is a centralized, web-based platform designed to digitize and streamline the management of judicial cases across courts in India. It replaces manual paper-based workflows with a secure, efficient, and transparent digital solution for judges, lawyers, and court administrators.
+## 📌 Overview
+The **Judicial Database Management System (IJDMS)** is a centralized, web-based platform designed to digitize and streamline judicial case management across courts in India.  
+The system replaces manual paper-based processes with a secure, efficient, and transparent solution for judges, lawyers, court staff, and administrators.
 
-🎯 Objectives
+---
 
-Eliminate manual case record-keeping.
+## 🎯 Objectives
+- 📂 Eliminate manual case record-keeping  
+- 🔐 Improve data accessibility for authorized users  
+- ⚖️ Automate workflows: case registration, hearings, judgment recording  
+- 📊 Enable transparency & judicial data insights with dashboards  
 
-Improve data accessibility for authorized users.
+---
 
-Automate core judicial workflows such as case registration, hearing tracking, and judgment recording.
+## 🧱 Tech Stack
 
-Ensure transparency and provide data-driven insights via dashboards.
+| Layer | Technology |
+|------|------------|
+| **Frontend** | React.js, Tailwind CSS, Chart.js |
+| **Backend** | Node.js, Express.js |
+| **Database** |  MySQL |
+| **Authentication** | JWT, bcrypt |
+| **Version Control** | Git & GitHub |
 
-⚙️ Tech Stack
-Layer	Technology
-Frontend	React.js, Tailwind CSS, Chart.js
-Backend	Node.js, Express.js
-Database	PostgreSQL / MySQL
-Authentication	JWT, bcrypt
-Deployment	Docker, AWS EC2, Nginx
-Version Control	Git & GitHub
-🧩 System Features
+---
 
-Case Management: Register and track cases with unique IDs.
+## ✅ Key Features
+### 📁 Case Management
+- Register cases with unique Case IDs  
+- Track case lifecycle from filing → hearings → judgment  
 
-Court and Judge Module: Manage courts, judges, and their jurisdictions.
+### 🏛️ Court & Judge Module
+- Store court details & judge assignments  
+- Maintain jurisdiction information  
 
-Litigant & Lawyer Management: Record details and maintain relationships.
+### 👨‍⚖️ Litigant & Lawyer Records
+- Manage litigant & lawyer profiles  
+- Map representation per case  
 
-Hearing Management: Schedule, update, and document hearings.
+### 🕓 Hearing Management
+- Schedule & log hearings  
+- Track orders and updates  
 
-Judgment Module: Store final outcomes and verdict details.
+### 📜 Judgment Tracking
+- One-to-one case-to-judgment mapping  
+- Store verdict, date, and decision summary  
 
-Analytics Dashboard: View trends in case types, durations, and outcomes.
+### 📈 Dashboard
+- Analytics based on case types, status, timelines  
 
-🗄️ Database Design
+---
 
-Entities: Case, Court, Judge, Lawyer, Litigant, Law_Section, Hearing, Judgment.
+## 🏗️ Installation & Setup
 
-Relationships:
+### 📎 Prerequisites
+- Node.js & npm  
+- MySQL / PostgreSQL  
+- Git installed  
 
-One-to-many (Court → Cases, Case → Hearings)
+### ⚙️ Steps
 
-Many-to-many (Lawyer ↔ Litigant ↔ Case)
-
-One-to-one (Case ↔ Judgment)
-
-Recursive (Case ↔ Case for appeals)
-
-🚀 Installation and Setup
-🖥️ Prerequisites
-
-Node.js and npm installed
-
-MySQL or PostgreSQL configured
-
-Git installed
-
-⚙️ Setup Instructions
+```bash
 # Clone the repository
 git clone https://github.com/<your-username>/Indian-Judicial-Database-Management-System.git
 cd Indian-Judicial-Database-Management-System
 
-# Backend setup
+# Backend Setup
 cd backend
 npm install
 npm start
 
-# Frontend setup
+# Frontend Setup
 cd ../frontend
 npm install
 npm run dev
-
-
-Access the web app at http://localhost:3000
-
-🔐 Security Features
-
-Role-based access control (Judge, Lawyer, Clerk, Admin)
-
-Encrypted password storage using bcrypt
-
-JWT-based authentication for secure session handling
-
-Database triggers for maintaining audit logs
-
-📊 Future Enhancements
-
-Integration with e-Filing systems and Ayushman Bharat Legal Services.
-
-Implementation of AI-powered analytics to predict case durations.
-
-Addition of OCR modules for automatic document uploads.
